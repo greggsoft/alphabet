@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Угадай букву</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <div class="score-bar">
+      <span id="score-correct">0</span>
+      <span class="score-sep">/</span>
+      <span id="score-total">33</span>
+    </div>
+
+    <div class="card">
+      <div id="emoji" class="emoji"></div>
+      <div id="word" class="word"></div>
+    </div>
+
+    <div id="choices" class="choices"></div>
+  </div>
+
+  <div id="victory" class="victory hidden">
+    <div class="victory-emoji">🎉</div>
+    <div class="victory-title">Молодец!</div>
+    <div class="victory-subtitle">Ты знаешь все буквы!</div>
+    <button id="restart-btn" class="restart-btn">Играть снова</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

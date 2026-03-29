@@ -1,0 +1,212 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 50%, #f3e5f5 100%);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  padding: 16px;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Score bar */
+.score-bar {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5c6bc0;
+  letter-spacing: 2px;
+  background: #fff;
+  padding: 8px 28px;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(92, 107, 192, 0.15);
+}
+
+.score-sep {
+  margin: 0 4px;
+  color: #b0bec5;
+}
+
+#score-correct {
+  color: #43a047;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  padding: 32px 24px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.emoji {
+  font-size: 6rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.word {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #37474f;
+  text-transform: uppercase;
+}
+
+.word .highlight {
+  color: #e53935;
+  font-size: 2.4rem;
+}
+
+/* Choices grid */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.choice-btn {
+  background: #fff;
+  border: 3px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #37474f;
+  padding: 18px 8px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, border-color 0.15s, background 0.15s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.choice-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border-color: #90caf9;
+}
+
+.choice-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+/* Correct answer */
+.choice-btn.correct {
+  background: #e8f5e9;
+  border-color: #43a047;
+  color: #2e7d32;
+  animation: pop 0.35s ease;
+}
+
+/* Wrong answer */
+.choice-btn.wrong {
+  background: #ffebee;
+  border-color: #e53935;
+  color: #c62828;
+  animation: shake 0.4s ease;
+}
+
+/* Animations */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+/* Victory screen */
+.victory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  max-width: 360px;
+  width: 100%;
+  animation: pop 0.5s ease;
+}
+
+.victory-emoji {
+  font-size: 5rem;
+}
+
+.victory-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #43a047;
+}
+
+.victory-subtitle {
+  font-size: 1.2rem;
+  color: #78909c;
+}
+
+.restart-btn {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #42a5f5, #7e57c2);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(126, 87, 194, 0.35);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(126, 87, 194, 0.45);
+}
+
+.restart-btn:active {
+  transform: scale(0.97);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .emoji { font-size: 4.5rem; }
+  .word  { font-size: 1.6rem; }
+  .word .highlight { font-size: 2rem; }
+  .choice-btn { font-size: 1.6rem; padding: 14px 4px; }
+}
