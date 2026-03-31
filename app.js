@@ -1,47 +1,47 @@
 const LETTERS = [
-  { letter: 'А', word: 'АРБУЗ',     emoji: '🍉' },
-  { letter: 'Б', word: 'БАНАН',     emoji: '🍌' },
-  { letter: 'В', word: 'ВОЛК',      emoji: '🐺' },
-  { letter: 'Г', word: 'ГРИБ',      emoji: '🍄' },
-  { letter: 'Д', word: 'ДОМ',       emoji: '🏠' },
-  { letter: 'Е', word: 'ЕНОТ',       emoji: '🦝' },
-  { letter: 'Ё', word: 'ЁЛКА',      emoji: '🎄' },
-  { letter: 'Ж', word: 'ЖИРАФ',     emoji: '🦒' },
-  { letter: 'З', word: 'ЗОНТ',      emoji: '☂️' },
-  { letter: 'И', word: 'ИНДЮК',     emoji: '🦃' },
-  { letter: 'Й', word: 'ЙОГУРТ',    emoji: '🥛' },
-  { letter: 'К', word: 'КОТ',       emoji: '🐱' },
-  { letter: 'Л', word: 'ЛИСА',      emoji: '🦊' },
-  { letter: 'М', word: 'МЯЧ',       emoji: '⚽' },
-  { letter: 'Н', word: 'НОГА',      emoji: '🦵' },
-  { letter: 'О', word: 'ОБЛАКО',    emoji: '☁️' },
-  { letter: 'П', word: 'ПИНГВИН',   emoji: '🐧' },
-  { letter: 'Р', word: 'РАДУГА',    emoji: '🌈' },
-  { letter: 'С', word: 'СЛОН',      emoji: '🐘' },
-  { letter: 'Т', word: 'ТИГР',      emoji: '🐯' },
-  { letter: 'У', word: 'УТКА',      emoji: '🦆' },
-  { letter: 'Ф', word: 'ФЛАМИНГО',  emoji: '🦩' },
-  { letter: 'Х', word: 'ХОМЯК',     emoji: '🐹' },
-  { letter: 'Ц', word: 'ЦВЕТОК',    emoji: '🌸' },
-  { letter: 'Ч', word: 'ЧЕРЕПАХА',  emoji: '🐢' },
-  { letter: 'Ш', word: 'ШЛЯПА',     emoji: '🎩' },
-  { letter: 'Щ', word: 'ЩЕНОК',     emoji: '🐶' },
-  { letter: 'Ъ', word: 'ОБЪЕЗД',    emoji: '🚧' },
-  { letter: 'Ы', word: 'МЫШЬ',      emoji: '🐭' },
-  { letter: 'Ь', word: 'КОНЬ',      emoji: '🐴' },
-  { letter: 'Э', word: 'ЭКРАН',     emoji: '📺' },
-  { letter: 'Ю', word: 'ЮЛА',       emoji: '🌀' },
-  { letter: 'Я', word: 'ЯБЛОКО',    emoji: '🍎' },
+  { letter: 'А', word: 'АРБУЗ', emoji: '🍉' },
+  { letter: 'Б', word: 'БАНАН', emoji: '🍌' },
+  { letter: 'В', word: 'ВОЛК', emoji: '🐺' },
+  { letter: 'Г', word: 'ГРИБ', emoji: '🍄' },
+  { letter: 'Д', word: 'ДОМ', emoji: '🏠' },
+  { letter: 'Е', word: 'ЕНОТ', emoji: '🦝' },
+  { letter: 'Ё', word: 'ЁЛКА', emoji: '🎄' },
+  { letter: 'Ж', word: 'ЖИРАФ', emoji: '🦒' },
+  { letter: 'З', word: 'ЗОНТ', emoji: '☂️' },
+  { letter: 'И', word: 'ИНДЮК', emoji: '🦃' },
+  { letter: 'Й', word: 'ЙОГУРТ', emoji: '🥛' },
+  { letter: 'К', word: 'КОТ', emoji: '🐱' },
+  { letter: 'Л', word: 'ЛИСА', emoji: '🦊' },
+  { letter: 'М', word: 'МЯЧ', emoji: '⚽' },
+  { letter: 'Н', word: 'НОГА', emoji: '🦵' },
+  { letter: 'О', word: 'ОБЛАКО', emoji: '☁️' },
+  { letter: 'П', word: 'ПИНГВИН', emoji: '🐧' },
+  { letter: 'Р', word: 'РАДУГА', emoji: '🌈' },
+  { letter: 'С', word: 'СЛОН', emoji: '🐘' },
+  { letter: 'Т', word: 'ТИГР', emoji: '🐯' },
+  { letter: 'У', word: 'УТКА', emoji: '🦆' },
+  { letter: 'Ф', word: 'ФЛАМИНГО', emoji: '🦩' },
+  { letter: 'Х', word: 'ХОМЯК', emoji: '🐹' },
+  { letter: 'Ц', word: 'ЦВЕТОК', emoji: '🌸' },
+  { letter: 'Ч', word: 'ЧЕРЕПАХА', emoji: '🐢' },
+  { letter: 'Ш', word: 'ШЛЯПА', emoji: '🎩' },
+  { letter: 'Щ', word: 'ЩЕНОК', emoji: '🐶' },
+  { letter: 'Ъ', word: 'ОБЪЕЗД', emoji: '🚧' },
+  { letter: 'Ы', word: 'МЫШЬ', emoji: '🐭' },
+  { letter: 'Ь', word: 'КОНЬ', emoji: '🐴' },
+  { letter: 'Э', word: 'ЭКРАН', emoji: '📺' },
+  { letter: 'Ю', word: 'ЮЛА', emoji: '🌀' },
+  { letter: 'Я', word: 'ЯБЛОКО', emoji: '🍎' },
 ];
 
-const gameEl      = document.getElementById('game');
-const victoryEl   = document.getElementById('victory');
-const emojiEl     = document.getElementById('emoji');
-const wordEl      = document.getElementById('word');
-const choicesEl   = document.getElementById('choices');
+const gameEl = document.getElementById('game');
+const victoryEl = document.getElementById('victory');
+const emojiEl = document.getElementById('emoji');
+const wordEl = document.getElementById('word');
+const choicesEl = document.getElementById('choices');
 const scoreCorrectEl = document.getElementById('score-correct');
-const scoreTotalEl   = document.getElementById('score-total');
-const restartBtn  = document.getElementById('restart-btn');
+const scoreTotalEl = document.getElementById('score-total');
+const restartBtn = document.getElementById('restart-btn');
 
 let queue = [];
 let currentItem = null;
@@ -98,7 +98,7 @@ function renderQuestion() {
   } else {
     const before = word.slice(0, idx);
     const target = word[idx];
-    const after  = word.slice(idx + 1);
+    const after = word.slice(idx + 1);
     wordEl.innerHTML = `${before}<span class="highlight">${target}</span>${after}`;
   }
 
@@ -130,8 +130,8 @@ function handleChoice(btn, letter) {
     btn.classList.add('correct');
     correctCount++;
     scoreCorrectEl.textContent = correctCount;
-    speak(`${currentItem.letter}. ${currentItem.word}`);
-    setTimeout(nextQuestion, 900);
+    speak(`Буква ${currentItem.letter} - ${currentItem.word}`);
+    setTimeout(nextQuestion, 3000);
   } else {
     btn.classList.add('wrong');
     // Highlight the correct button
