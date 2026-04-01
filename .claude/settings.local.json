@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(//c/Users/gregg/Downloads/**)",
-      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(''/c/Users/gregg/Downloads/alphabet_icon.png''\\); print\\(img.size, img.mode\\)\")"
-    ]
-  }
-}
