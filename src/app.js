@@ -127,11 +127,11 @@ function handleChoice(btn, letter) {
     btn.classList.add('correct');
     correctCount++;
     scoreCorrectEl.textContent = correctCount;
-    speak(`Правильно. Буква "${currentItem.letter}", ${currentItem.word}`);
-    setTimeout(nextQuestion, 3000);
+    speak(`${currentItem.letter}, ${currentItem.word}`);
+    setTimeout(nextQuestion, 2500);
   } else {
     btn.classList.add('wrong');
-    speak(`Буква "${letter}"`);
+    speak(`${letter}`);
     setTimeout(() => locked = false, 1000);
   }
 }
