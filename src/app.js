@@ -130,16 +130,11 @@ function handleChoice(btn, letter) {
     btn.classList.add('correct');
     correctCount++;
     scoreCorrectEl.textContent = correctCount;
-    speak(`Буква "${currentItem.letter}", ${currentItem.word}`);
+    speak(`Правильно. Буква "${currentItem.letter}", ${currentItem.word}`);
     setTimeout(nextQuestion, 3000);
   } else {
     btn.classList.add('wrong');
-    // Highlight the correct button
-    allBtns.forEach(b => {
-      if (b.textContent === currentItem.letter) b.classList.add('correct');
-    });
-    speak(currentItem.letter);
-    setTimeout(nextQuestion, 1300);
+    speak(`Буква "${currentItem.letter}"`);
   }
 }
 
