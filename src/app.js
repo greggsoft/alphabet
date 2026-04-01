@@ -123,9 +123,6 @@ function handleChoice(btn, letter) {
   if (locked) return;
   locked = true;
 
-  const allBtns = choicesEl.querySelectorAll('.choice-btn');
-  allBtns.forEach(b => b.disabled = true);
-
   if (letter === currentItem.letter) {
     btn.classList.add('correct');
     correctCount++;
@@ -134,7 +131,8 @@ function handleChoice(btn, letter) {
     setTimeout(nextQuestion, 3000);
   } else {
     btn.classList.add('wrong');
-    speak(`Буква "${currentItem.letter}"`);
+    speak(`Буква "${letter}"`);
+    setTimeout(() => locked = false, 1000);
   }
 }
 
