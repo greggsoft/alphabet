@@ -130,7 +130,7 @@ function handleChoice(btn, letter) {
     btn.classList.add('correct');
     correctCount++;
     scoreCorrectEl.textContent = correctCount;
-    speak(`Буква ${currentItem.letter} - ${currentItem.word}`);
+    speak(`Буква "${currentItem.letter}", ${currentItem.word}`);
     setTimeout(nextQuestion, 3000);
   } else {
     btn.classList.add('wrong');
