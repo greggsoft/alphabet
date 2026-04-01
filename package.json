@@ -1,0 +1,13 @@
+{
+  "name": "alphabet",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite src",
+    "build": "vite build",
+    "preview": "vite preview --outDir dist"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
